@@ -24,6 +24,7 @@ body {
   margin: 360px auto;
   box-shadow: inset 10px 0px 15px 0px var(--shadow);
   background-color: var(--background);
+  border-radius: 15px;
 }
 
 .card .textContainer {
@@ -33,18 +34,40 @@ body {
 }
 
 .card .textContainer #header {
-  font-size: 1.5rem;
-  margin: 60px auto;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 40px auto;
+  text-align: center;
+  color: red;
 }
 
 .card p {
-  font-family: 'Roboto';
-  font-size: 1.1rem;
-  line-height: 1.4;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
   color: var(--text);
   font-style: italic;
   text-align: center;
-  margin: 30px auto;
+  margin: 20px auto;
+}
+
+.fa-heart {
+  color: red;
+  font-size: 1.4rem;
+  margin: 0 5px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .card .front {
@@ -55,7 +78,6 @@ body {
   border: 10px solid var(--border-color);
   backface-visibility: hidden;
   background-color: var(--front-bg);
-  background-size: contain;
   transform-style: preserve-3d;
   transform-origin: 50% 0%;
   transform: perspective(800px) rotateX(0deg);
@@ -84,7 +106,8 @@ body {
 
 .card:hover .back {
   transform: perspective(800px) rotateX(170deg);
-  box-shadow: 0px 5px 10px 0px var(--shadow), inset 2px 0px 15px 0px var(--shadow);
+  box-shadow: 0px 5px 10px 0px var(--shadow),
+    inset 2px 0px 15px 0px var(--shadow);
 }
 
 .heart-container {
@@ -111,8 +134,8 @@ body {
   height: 100px;
   width: 100px;
 }
-.heart-1:before{
-  top: -50px
+.heart-1:before {
+  top: -50px;
 }
 .heart-1:after {
   left: 50px;
@@ -138,8 +161,8 @@ body {
   height: 80px;
   width: 80px;
 }
-.heart-2:before{
-  top: -40px
+.heart-2:before {
+  top: -40px;
 }
 .heart-2:after {
   left: 40px;
@@ -165,10 +188,9 @@ body {
   height: 60px;
   width: 60px;
 }
-.heart-3:before{
-  top: -30px
+.heart-3:before {
+  top: -30px;
 }
 .heart-3:after {
   left: 30px;
 }
-
